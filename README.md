@@ -11,8 +11,6 @@ After you download/clone the repo what you need to do is the following:
 ```bash
 npm install
 
-npm install --save @angular/material @angular/animations
-
 ng serve
 ```
 and you are ready to open your browser at http://localhost:3000 and have fun
