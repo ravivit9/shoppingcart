@@ -8,22 +8,13 @@ This is an Angular 4 CLI clean project with Material Design imported and ready t
 
 After you download/clone the repo what you need to do is the following:
 
-### Step 1: install the @angular/cli global package if you dont have that
+#### Step 1: install the @angular/cli global package with `npm install -g @angular/cli`
+###### NOTE: If you dont want to install the angular cli you can skip to Step 2. 
 
-```bash
-npm install -g @angular/cli
-```
+#### Step 2: Install node modules inside the project folder with `npm install`
 
-### Step 2: Install the Node Modules inside the project folder
+#### Step 3: Start the Project with `ng serve` or if you dont have the CLI use `npm start`
 
-```bash
-npm install
-```
-
-### Step 3: Start the Project
-```bash
-ng serve
-```
 and you are ready to open your browser at http://localhost:3000 and have fun
 
 to learn more and know how to use it visit [Material Design](https://material.angular.io)
