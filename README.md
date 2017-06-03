@@ -1,10 +1,29 @@
-# Ng4Material
+# Ng4-Material
+
+## About
+
+This is an Angular 4 CLI clean project with Material Design imported and ready to use
+
+## Instalation Guide
+
+After you download/clone the repo what you need to do is the following:
+
+```bash
+npm install
+
+npm install --save @angular/material @angular/animations
+
+ng serve
+```
+and you are ready to open your browser at http://localhost:3000 and have fun
+
+to learn more and know how to use it visit [Material Design](https://material.angular.io)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
