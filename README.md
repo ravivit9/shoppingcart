@@ -15,7 +15,7 @@ After you download/clone the repo what you need to do is the following:
 #### Step 1: install the @angular/cli global package with `npm install -g @angular/cli`
 ###### NOTE: If you dont want to install angular cli you can skip to Step 2. 
 
-#### Step 2: Install node modules inside the project folder with `npm i` or `yarn`
+#### Step 2: Install node modules inside the project folder with `npm i` or `yarn` (`npm i -g yarn`)
 
 #### Step 3: Start the Project with `ng serve` or if you dont have the CLI use `npm start`
 
