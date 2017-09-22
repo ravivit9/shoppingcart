@@ -1,0 +1,43 @@
+<p class=" mat-input-error">{{error}}</p>
+
+
+<div>
+    <md-toolbar color="primary">
+        <md-icon md-list-icon color="accent">shopping_cart</md-icon> <span>Checkout</span>
+    </md-toolbar>
+    <md-card *ngIf="!error">
+        <md-list>
+            <h3>Pay in the different currencies.</h3>
+
+            <table>
+                <thead>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Unit Price ($)</th>
+                    <th *ngFor="let rate of allRates">({{rate.currency}}:<i>{{(rate.rate).toFixed(2)}}</i>)</th>
+                </thead>
+                <tbody>
+                <tr *ngFor="let product of products">
+                    <td><div class="product-desc">{{product.desc}}</div></td>
+                    <td><b>{{product.basketQuantity}} {{product.perQuantity}}</b></td>
+                    <td><div class="product-rate" mg-line>{{product.baseRate}}</div></td>
+                    <td *ngFor="let rate of allRates">{{(product.basketQuantity * rate.rate).toFixed(2)}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Please Pay In </td>
+                    <td *ngFor="let rate of allRates"><button md-raised-button color="accent">{{rate.currency}} {{rate.total}}</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </md-list>
+
+    </md-card>
+</div>
+
+
+<md-card>
+    <div>Exchange Rates - Base currency USD</div>
+    <div *ngFor="let rate of allRates ">{{rate.currency}} - {{rate.rate}} per {{rate.baseCurrency}}</div>
+</md-card>

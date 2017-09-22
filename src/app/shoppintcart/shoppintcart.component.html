@@ -1,0 +1,39 @@
+
+<div>
+    <md-toolbar color="primary">
+        <md-icon md-list-icon color="accent">shopping_cart</md-icon> <span>Available Products</span>
+    </md-toolbar>
+    <md-card>
+        <button md-raised-button color="warn" (click)="resetDB('storedProducts')">Refresh DB</button>
+        <md-list>
+            <h3>Please
+                <md-icon md-list-icon color="primary">add_shopping_cart</md-icon> or
+                <md-icon md-list-icon color="warn">remove_shopping_cart</md-icon> products from your shopping basket.</h3>
+
+            <table>
+                <thead>
+                <th>Product Desc</th>
+                <th>Unit Price ($)</th>
+                <th>Price ($)</th>
+                <th>Quantity</th>
+                <th></th>
+                <th></th>
+                </thead>
+                <tbody>
+                <tr *ngFor="let product of products">
+                    <td><div class="product-desc">{{product.desc}}</div></td>
+                    <td><div class="product-rate" mg-line>{{product.baseCurrency}} {{product.baseRate}} / {{product.perQuantity}}</div></td>
+                    <td>{{product.total}}</td>
+                    <td><md-icon md-list-icon color="accent">shopping_basket</md-icon> <b>{{product.basketQuantity}}</b></td>
+                    <td><md-icon md-list-icon color="primary" (click)="updateCart(product.desc, 'add')">add_shopping_cart</md-icon></td>
+                    <td><md-icon md-list-icon color="warn" (click)="updateCart(product.desc, 'remove')">remove_shopping_cart</md-icon></td>
+                </tr>
+                </tbody>
+
+            </table>
+        </md-list>
+        <button md-raised-button color="primary" (click)="checkout()" [disabled]="disableCheckout">Checkout</button>
+
+
+    </md-card>
+</div>
