@@ -1,6 +1,6 @@
 import { Ng4MaterialPage } from './app.po';
 
-describe('ng4-material App', () => {
+describe('Shopping cart App', () => {
   let page: Ng4MaterialPage;
 
   beforeEach(() => {
